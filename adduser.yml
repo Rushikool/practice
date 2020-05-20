@@ -1,12 +1,11 @@
 ---
- - hosts: fedvm
-   remote_user: ansible
+ - hosts: all
+   remote_user: rushikesh
    become: true
-   vars_files: hashpass.yml
    tasks:
            - name: adding the user named ansuser
              user:
                      name: hash
                      state: present
-                     password: "{{ my_password }}"
+                     
                   
